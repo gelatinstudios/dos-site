@@ -1,6 +1,8 @@
 
 #include "main.h"
 
+// TODO: add mouse and touchscreen support
+
 WAJIC(void,  go_to_page, (const char *url, int length), 
       {
           window.open(MStrGet(url, length));
@@ -137,7 +139,7 @@ struct sound_t *generate_sound_effect(int freq) {
     
     int sample_rate = 44100;
     
-    int sample_count = sample_rate / 16; // half a second
+    int sample_count = sample_rate / 16;
     
     float *pulse_data_raw = (float *)malloc(sample_count*sizeof(float));
     
